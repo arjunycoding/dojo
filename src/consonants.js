@@ -77,5 +77,114 @@ const consonants = [
         fileName: nna,
         letter: "ञ"
     },
+    {
+        fileName: ta,
+        letter: "ट"
+    },
+    {
+        fileName: tha,
+        letter: "ठ"
+    },
+    {
+        fileName: da,
+        letter: "ड"
+    },
+    {
+        fileName: dha,
+        letter: "ढ"
+    },
+    {
+        fileName: ana,
+        letter: "ण"
+    },
+    {
+        fileName: thha,
+        letter: "त"
+    },
+    {
+        fileName: thhha,
+        letter: "थ"
+    },
+    {
+        fileName: dhha,
+        letter: "द"
+    },
+    {
+        fileName: dhhha,
+        letter: "ध"
+    },
+    {
+        fileName: na,
+        letter: "न"
+    },
+    {
+        fileName: pa,
+        letter: "प"
+    },
+    {
+        fileName: fa,
+        letter: "फ"
+    },
+    {
+        fileName: ba,
+        letter: "ब"
+    },
+    {
+        fileName: bha,
+        letter: "भ"
+    },
+    {
+        fileName: ma,
+        letter: "म"
+    },
+    {
+        fileName: ya,
+        letter: "य"
+    },
+    {
+        fileName: ra,
+        letter: "र"
+    },
+    {
+        fileName: la,
+        letter: "ल"
+    },
+    {
+        fileName: va,
+        letter: "व"
+    },
+    {
+        fileName: sha,
+        letter: "श"
+    },
+    {
+        fileName: shha,
+        letter: "ष"
+    },
+    {
+        fileName: sa,
+        letter: "स"
+    },
+    {
+        fileName: ha,
+        letter: "ह"
+    },
+    {
+        fileName: ala,
+        letter: "ळ"
+    },
+    {
+        fileName: ksha,
+        letter: "क्ष"
+    },
+    {
+        fileName: gyna,
+        letter: "ज्ञ"
+    },
+    {
+        fileName: thru,
+        letter: "त्र"
+    },
+
 ]
 export default consonants

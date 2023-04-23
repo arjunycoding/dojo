@@ -4,6 +4,15 @@ import consonants from "../consonants";
 import vowels from "../vowels";
 export default function LessonOne() {
 
+    function end_of_line(letter) {
+        const ending_letters = ["ङ", "ञ", "ण", "न", "म", "व", "ह", "त्र"]
+        for (let i = 0; i < ending_letters.length; i++) {
+            if (ending_letters[i] == letter) {
+                return true
+            }
+        }
+
+    }
     return (
         <div>
             <h1>Lesson 1: Vowels & Consonants</h1>
@@ -14,7 +23,8 @@ export default function LessonOne() {
             ))}
             <h3>Consonants:</h3>
             {consonants.map(letter => (
-                <LetterBtn key={letter.letter} symbol={letter.letter} audio_file={letter.fileName} />
+                <LetterBtn key={letter.letter} symbol={letter.letter} audio_file={letter.fileName} add_break={end_of_line(letter.letter)} />
+
             ))}
         </div>
     )

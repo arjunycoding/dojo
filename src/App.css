@@ -31,3 +31,13 @@
   border: none;
   margin: 10px;
 }
+
+.hidden_letter_button {
+  font-family: 'Tiro Devanagari Sanskrit', serif;
+  font-size: 50px;
+  background-color: blue;
+  border: none;
+  margin: 10px;
+  height: 50px;
+  width: 50px;
+}
