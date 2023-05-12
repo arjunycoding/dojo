@@ -1,10 +1,10 @@
 import React from "react"
 import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import LessonOne from "./lessons/lesson_one";
 import LessonTwo from "./lessons/lesson_two";
 import LessonThree from "./lessons/lesson_three";
 import WelcomeMessage from "./welcome_message"
-
 function App() {
   const [show_lesson_one, set_show_lesson_one] = React.useState(false)
   const [show_lesson_two, set_show_lesson_two] = React.useState(false)

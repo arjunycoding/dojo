@@ -1,10 +1,10 @@
 import React from "react";
 import LetterBtn from "./letter_button";
-import ProgressBar from 'react-bootstrap/ProgressBar';
 
 export default function Quiz(props) {
     const [get_question_correct, set_get_question_correct] = React.useState("hide")
-
+    const [total_questions, set_total_questions] = React.useState(0)
+    const [right_answers, set_right_answers] = React.useState(0)
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
 
@@ -22,12 +22,14 @@ export default function Quiz(props) {
     }
     function Option(props) {
         function check_answer() {
+            set_total_questions(total_questions + 1)
             if (props.answer === props.correct_answer) {
                 if (get_question_correct === true) {
                     set_get_question_correct("true")
                 } else {
                     set_get_question_correct(true)
                 }
+                set_right_answers(right_answers + 1)
                 return true
             }
             if (get_question_correct === false) {
@@ -65,28 +67,33 @@ export default function Quiz(props) {
     let question = generate_random_question()
     function set_question() {
         question = generate_random_question()
+        set_get_question_correct("hide")
     }
     const wrong_answers = shuffle([...question].slice(2))
     return (
         <div>
-            <ProgressBar now={45} />
-            <LetterBtn key={1} audio_file={question[0]} hidden={true} />
-            {wrong_answers.map(answer => (
-                <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={question[1]} />
-            ))}
-            {(get_question_correct === true || get_question_correct === "true")
-                ? <p>
-                    <span>CORRECT!!!! Good Job</span>
-                    <button onClick={set_question}>next question</button>
-                </p>
-                : (get_question_correct === "hide")
-                    ? ""
-                    :
-                    <p>
-                        <span>INCORRECT, the right answer was {question[1]}</span>
+            <div>
+                {(get_question_correct === true || get_question_correct === "true")
+                    ? <p>
+
+                        <span>CORRECT!!!! Good Job</span>
                         <button onClick={set_question}>next question</button>
                     </p>
-            }
+                    : (get_question_correct === "hide")
+                        ? <div>
+                            <LetterBtn key={1} audio_file={question[0]} hidden={true} />
+                            {wrong_answers.map(answer => (
+                                <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={question[1]} />
+                            ))}
+                        </div>
+                        :
+                        <p>
+                            <span>INCORRECT, the right answer was {question[1]}</span>
+                            <button onClick={set_question}>next question</button>
+                        </p>
+                }
+                score:{right_answers}/{total_questions}
+            </div>
         </div >
     )
 }
