@@ -13,6 +13,8 @@ export default function LetterBtn(props) {
         )
     } else if (props.hidden) {
         return (<button className="hidden_letter_button" onClick={() => { play_audio() }}></button>)
+    } else if (props.audio_btn) {
+        return (<button className="hidden_letter_button" onMouseOver={() => { play_audio() }} onClick={() => { props.on_click() }}></button>)
     }
     return (
         <button className="letter_button" onClick={() => { play_audio() }}>{props.symbol}</button>
