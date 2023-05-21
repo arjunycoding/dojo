@@ -1,3 +1,8 @@
+/* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap');
 
-@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.letter_button_huge {
+    background-color: inherit !important;
+    font-family: "Tiro Devanagari Sanskrit", Arial, Helvetica, sans-serif !important;
+}

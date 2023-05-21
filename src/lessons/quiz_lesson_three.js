@@ -33,18 +33,15 @@ export default function Quiz(props) {
                 set_right_answers(right_answers + 1)
                 return true
             }
-            if (props.answer !== props.correct_answer) {
-                if (get_question_correct === false) {
-                    set_get_question_correct("false")
-                } else {
-                    set_get_question_correct(false)
-                }
-                return false
+            if (get_question_correct === false) {
+                set_get_question_correct("false")
+            } else {
+                set_get_question_correct(false)
             }
+            return false
         }
-        const answer_file_name = props.array.filter(function (letter) { return letter.letter === props.answer })
         return (
-            <LetterBtn symbol={props.answer} audio_file={answer_file_name[0].fileName} audio_btn={true} on_click={check_answer} />
+            <button onClick={check_answer}>{props.answer}</button>
         )
     }
     function generate_random_question() {
@@ -68,6 +65,7 @@ export default function Quiz(props) {
             question[3]
         ]
     }
+
     function set_question() {
         set_current_question(generate_random_question())
         set_get_question_correct("hide")
@@ -82,24 +80,21 @@ export default function Quiz(props) {
                         <span>CORRECT!!!! Good Job</span>
                         <button onClick={set_question}>next question</button>
                     </p>
-                    : (get_question_correct === false || get_question_correct === "false")
-                        ? < p >
-                            < span > INCORRECT, the right answer was:<br /> <LetterBtn symbol={current_question[1]} audio_file={current_question[0]} /></span><br />
-                            <button onClick={() => {
-                                set_current_question(generate_random_question())
-                                set_get_question_correct("hide")
-                            }}>next question</button>
-                        </p>
-                        :
-                        <div>
-                            {current_question[1]}
+                    : (get_question_correct === "hide")
+                        ? <div>
+                            <LetterBtn key={1} audio_file={current_question[0]} hidden={true} />
                             {wrong_answers.map(answer => (
-                                <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={current_question[1]} array={props.array} />
+                                <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={current_question[1]} />
                             ))}
                         </div>
+                        :
+                        <p>
+                            <span>INCORRECT, the right answer was {current_question[1]}</span>
+                            <button onClick={set_question}>next question</button>
+                        </p>
                 }
-                score: {right_answers} /{total_questions}<br /> <br />
-            </div >
+                score:{right_answers}/{total_questions}
+            </div>
         </div >
     )
 }

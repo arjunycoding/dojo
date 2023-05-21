@@ -1,19 +1,24 @@
 import React from "react"
-import Quiz from "./quiz_lesson_two"
-import vowels from "../vowels"
-import consonants from "../consonants"
-export default function LessonThree() {
+import LetterBtn from "./letter_button";
+import "../App.css"
+import consonants from "../consonants";
+export default function LessonOne() {
+    const [current_letter, set_current_letter] = React.useState(false)
     return (
         <div>
-            <h1>Lesson 3: Quiz Time!!!</h1>
+            Similar to English Sanskrit also has vowels, and consonants. Click on a consonant to look at it more in detail. Click on the huge letter to here it! However, don't be overwhelmed by the amount of consonants. Don't worry! With constant practice and dedication you will learn them in no time!
             <div>
-                <p>Let's see how much sanskrit <i>you</i> know</p>
-                <p>It's simple I will give you an audio and you have to use your ninja skills to decipher what letter it is</p>
-                <p>You can check your score at the bottom of the quiz. However, we advice you to move on only after you have answered more than 20 question correctly. Feel free to come back here any time and review your sanskrit skills again!</p>
-                <div className="quiz">
-                    <Quiz array={consonants.concat(vowels)} key={1} />
-                </div>
+
+                {consonants.map((letter) => {
+                    return (<button key={letter.letter} onClick={() => { set_current_letter(letter) }}>{letter.letter}</button>)
+                })}
             </div>
-        </div>
+            <div>
+                {current_letter ?
+                    <LetterBtn symbol={current_letter.letter} audio_file={current_letter.fileName} huge={true} /> :
+                    <p>Please Select A Letter</p>
+                }
+            </div>
+        </div >
     )
 }

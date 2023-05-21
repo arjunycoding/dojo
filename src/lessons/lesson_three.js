@@ -5,11 +5,11 @@ import consonants from "../consonants"
 export default function LessonThree() {
     return (
         <div>
-            <h1>Lesson 4: Quiz Time!!!</h1>
+            <h1>Lesson 3: Quiz Time!!!</h1>
             <div>
                 <p>Let's see how much sanskrit <i>you</i> know</p>
-                <p>Unlike last item this time I will give you a letter and you will have to figure out what it means. Same rules as last time. We also advise you to get 1 question right and then move on</p>
-                <p>Also, make sure you are carful. Hovering over an audio will play it!</p>
+                <p>It's simple I will give you an audio and you have to use your ninja skills to decipher what letter it is</p>
+                <p>You can check your score at the bottom of the quiz. However, we advice you to move on only after you have answered more than 20 question correctly. Feel free to come back here any time and review your sanskrit skills again!</p>
                 <div className="quiz">
                     <Quiz array={consonants.concat(vowels)} key={1} />
                 </div>
