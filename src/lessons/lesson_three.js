@@ -1,5 +1,5 @@
 import React from "react"
-import Quiz from "./quiz_lesson_four"
+import Quiz from "./quiz_lesson_three"
 import vowels from "../vowels"
 import consonants from "../consonants"
 export default function LessonThree() {
