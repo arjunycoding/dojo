@@ -9,15 +9,11 @@ import WelcomeMessage from "./welcome_message"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 function App() {
-  const [show_lesson_one, set_show_lesson_one] = React.useState(false)
-  const [show_lesson_two, set_show_lesson_two] = React.useState(false)
-  const [show_lesson_three, set_show_lesson_three] = React.useState(false)
-
   return (
 
     <div className="App">
       <Tabs
-        defaultActiveKey="profile"
+        defaultActiveKey="why"
         id="uncontrolled-tab-example"
         className="mb-3"
       >

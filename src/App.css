@@ -3,6 +3,47 @@
 
 
 .letter_button_huge {
-    background-color: inherit !important;
-    font-family: "Tiro Devanagari Sanskrit", Arial, Helvetica, sans-serif !important;
+    background-color: inherit;
+    font-family: "Tiro Devanagari Sanskrit", Arial, Helvetica, sans-serif;
+    border: none;
+    font-size: 200px;
+}
+
+.col {
+    padding: 70px 0;
+
+    text-align: center;
+}
+
+.letter_button_select {
+    font-family: "Tiro Devanagari Sanskrit", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    border: none;
+    background-color: inherit;
+
+}
+
+.none_selected {
+    color: rgb(156, 156, 156);
+    font-size: 25px;
+}
+
+.App {
+    margin: auto;
+    width: 60%;
+    margin-top: 5%;
+
+}
+
+.welcome_message_content {
+    text-align: justify;
+}
+
+.col {
+    border-left: 1px solid rgb(209, 209, 209);
+}
+
+.content {
+    border: 1px solid black;
+    color: red;
 }
