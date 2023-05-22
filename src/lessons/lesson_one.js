@@ -6,7 +6,7 @@ import "../App.css"
 export default function LessonOne() {
     const [current_letter, set_current_letter] = React.useState(false)
     return (
-        <div>
+        <div className="lesson">
             Similar to English Sanskrit also has vowels, and consonants. Click on a vowel to look at it more in detail. Click on the huge letter to here it!
             <br />
             <br />

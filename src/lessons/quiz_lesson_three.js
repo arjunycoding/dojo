@@ -41,7 +41,7 @@ export default function Quiz(props) {
             return false
         }
         return (
-            <button onClick={check_answer}>{props.answer}</button>
+            <button className="sanskrit medium_font option_quiz_lesson_three" onClick={check_answer}>{props.answer}</button>
         )
     }
     function generate_random_question() {
@@ -52,7 +52,10 @@ export default function Quiz(props) {
             let value = copy_of_letters[index].letter
             question.push(value)
             copy_of_letters.filter(function (letter) {
-                return letter !== copy_of_letters[index];
+                if (letter === copy_of_letters[index]) {
+                    copy_of_letters.splice(index, 1)
+                }
+                return ""
             })
         }
         const correct_answer = props.array.filter(function (letter) { return letter.letter === question[0] });
@@ -75,25 +78,32 @@ export default function Quiz(props) {
         <div>
             <div>
                 {(get_question_correct === true || get_question_correct === "true")
-                    ? <p>
+                    ? <div className="quiz_lesson_four_question">
+
 
                         <span>CORRECT!!!! Good Job</span>
                         <button onClick={set_question}>next question</button>
-                    </p>
+                    </div>
                     : (get_question_correct === "hide")
-                        ? <div>
-                            <LetterBtn key={1} audio_file={current_question[0]} hidden={true} />
+                        ? <div className="quiz_lesson_four_question">
+
+                            <LetterBtn key={1} audio_file={current_question[0]} large_audio_btn={true} />
+                            <br />
+                            <br />
                             {wrong_answers.map(answer => (
-                                <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={current_question[1]} />
+                                <Option key={answer} answer={answer} correct_answer={current_question[1]} />
                             ))}
+                            <br />
+                            <br />
+                            Score: {total_questions ? (right_answers + "/" + total_questions) : <span className="none_selected small_font">No Questions Answered</span>}<br /> <br />
                         </div>
                         :
-                        <p>
+                        <div className="quiz_lesson_four_question">
+
                             <span>INCORRECT, the right answer was {current_question[1]}</span>
                             <button onClick={set_question}>next question</button>
-                        </p>
+                        </div>
                 }
-                score:{right_answers}/{total_questions}
             </div>
         </div >
     )

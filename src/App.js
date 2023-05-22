@@ -15,7 +15,7 @@ function App() {
       <Tabs
         defaultActiveKey="why"
         id="uncontrolled-tab-example"
-        className="mb-3"
+        className="mb-3 tabs"
       >
         <Tab eventKey="why" title="Why Sanskrit?">
           <WelcomeMessage />

@@ -44,7 +44,9 @@ export default function Quiz(props) {
         }
         const answer_file_name = props.array.filter(function (letter) { return letter.letter === props.answer })
         return (
-            <LetterBtn symbol={props.answer} audio_file={answer_file_name[0].fileName} audio_btn={true} on_click={check_answer} />
+            <p>
+                <span className="pointer" onClick={check_answer}>Audio {props.question_number}:</span><LetterBtn symbol={props.answer} audio_file={answer_file_name[0].fileName} audio_btn={true} />
+            </p>
         )
     }
     function generate_random_question() {
@@ -55,7 +57,10 @@ export default function Quiz(props) {
             let value = copy_of_letters[index].letter
             question.push(value)
             copy_of_letters.filter(function (letter) {
-                return letter !== copy_of_letters[index];
+                if (letter === copy_of_letters[index]) {
+                    copy_of_letters.splice(index, 1)
+                }
+                return ""
             })
         }
         const correct_answer = props.array.filter(function (letter) { return letter.letter === question[0] });
@@ -98,7 +103,9 @@ export default function Quiz(props) {
                             <br />
                             <span className="sanskrit large_font">{current_question[1]}</span><br />
                             {wrong_answers.map(answer => (
-                                <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={current_question[1]} array={props.array} />
+                                <span key={answer}>
+                                    <Option answer={answer} question_number={wrong_answers.indexOf(answer) + 1} correct_answer={current_question[1]} array={props.array} />
+                                </span>
                             ))}
                             <br />
                             <br />

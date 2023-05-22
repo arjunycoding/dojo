@@ -7,7 +7,7 @@ export default function LessonOne() {
     const [current_letter, set_current_letter] = React.useState(false)
     let add_break = 0
     return (
-        <div>
+        <div className="lesson">
             Similar to English Sanskrit also has vowels, and consonants. Click on a consonant to look at it more in detail. Click on the huge letter to here it! However, don't be overwhelmed by the amount of consonants. Don't worry! With constant practice and dedication you will learn them in no time!
             <br />
             <br />
