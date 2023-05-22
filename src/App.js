@@ -13,11 +13,11 @@ function App() {
 
     <div className="App">
       <Tabs
-        defaultActiveKey="why"
+        defaultActiveKey="intro"
         id="uncontrolled-tab-example"
         className="mb-3 tabs"
       >
-        <Tab eventKey="why" title="Why Sanskrit?">
+        <Tab eventKey="intro" title="Introduction">
           <WelcomeMessage />
         </Tab>
         <Tab eventKey="Vowels" title="Vowels">
