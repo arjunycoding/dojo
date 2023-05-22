@@ -77,28 +77,34 @@ export default function Quiz(props) {
         <div>
             <div>
                 {(get_question_correct === true || get_question_correct === "true")
-                    ? <p>
+                    ? <div className="quiz_lesson_four_question">
 
                         <span>CORRECT!!!! Good Job</span>
-                        <button onClick={set_question}>next question</button>
-                    </p>
+                        <br />
+                        <br />
+                        <button className="next_question" onClick={set_question}>Next Question</button>
+                    </div>
                     : (get_question_correct === false || get_question_correct === "false")
-                        ? < p >
-                            < span > INCORRECT, the right answer was:<br /> <LetterBtn symbol={current_question[1]} audio_file={current_question[0]} /></span><br />
-                            <button onClick={() => {
+                        ? <div className="quiz_lesson_four_question">
+
+                            < span > INCORRECT, the right answer was:<br /> <LetterBtn symbol={current_question[1]} audio_file={current_question[0]} answer={true} /></span><br />
+                            <button className="next_question" onClick={() => {
                                 set_current_question(generate_random_question())
                                 set_get_question_correct("hide")
                             }}>next question</button>
-                        </p>
+                        </div>
                         :
-                        <div>
-                            {current_question[1]}
+                        <div className="quiz_lesson_four_question">
+                            <br />
+                            <span className="sanskrit large_font">{current_question[1]}</span><br />
                             {wrong_answers.map(answer => (
                                 <Option key={(Math.random() * 10000000000000000000000000)} answer={answer} correct_answer={current_question[1]} array={props.array} />
                             ))}
+                            <br />
+                            <br />
+                            Score: {total_questions ? (right_answers + "/" + total_questions) : <span className="none_selected small_font">No Questions Answered</span>}<br /> <br />
                         </div>
                 }
-                score: {right_answers} /{total_questions}<br /> <br />
             </div >
         </div >
     )

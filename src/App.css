@@ -1,6 +1,13 @@
 /* @import 'bootstrap/dist/css/bootstrap.min.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap');
 
+.App {
+    margin: auto;
+    width: 60%;
+    margin-top: 5%;
+    color: black;
+}
+
 
 .letter_button_huge {
     background-color: inherit;
@@ -28,12 +35,6 @@
     font-size: 25px;
 }
 
-.App {
-    margin: auto;
-    width: 60%;
-    margin-top: 5%;
-
-}
 
 .welcome_message_content {
     text-align: justify;
@@ -46,4 +47,42 @@
 .content {
     border: 1px solid black;
     color: red;
+}
+
+.sanskrit {
+    font-family: "Tiro Devanagari Sanskrit", Arial, Helvetica, sans-serif;
+
+}
+
+.hidden_letter_button {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+.large_font {
+    font-size: 50px;
+    color: black;
+}
+
+.quiz_lesson_four_question {
+    text-align: center;
+    padding: 0;
+}
+
+.small_font {
+    font-size: 18px;
+}
+
+.next_question {
+    background-color: #5eacff;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
 }

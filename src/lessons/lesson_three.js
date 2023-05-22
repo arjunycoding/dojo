@@ -5,11 +5,9 @@ import consonants from "../consonants"
 export default function LessonThree() {
     return (
         <div>
-            <h1>Lesson 3: Quiz Time!!!</h1>
             <div>
-                <p>Let's see how much sanskrit <i>you</i> know</p>
-                <p>It's simple I will give you an audio and you have to use your ninja skills to decipher what letter it is</p>
-                <p>You can check your score at the bottom of the quiz. However, we advice you to move on only after you have answered more than 20 question correctly. Feel free to come back here any time and review your sanskrit skills again!</p>
+                <p>Time to test your <span className="sanskrit">संस्कृत</span>(sanskrit) skills! Click the blue audio box to here the audio. Then figure out which letter matches the audio. You can answer as many questions as you want and check your score in the bottom.</p>
+
                 <div className="quiz">
                     <Quiz array={consonants.concat(vowels)} key={1} />
                 </div>
