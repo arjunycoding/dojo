@@ -29,7 +29,7 @@ export default function WelcomeMessage() {
             <b>Credits</b>
             <br />
             <br />
-            HUGE thanks to <a href="http://www.vidyapith.org/">Vivekananda Vidyapith</a> for helping me learn sanskrit. A special thanks to Jaymeen Uncle, as he provided the voices for my websites.
+            HUGE thanks to <a href="http://www.vidyapith.org/" target="_blank">Vivekananda Vidyapith</a> for helping me learn sanskrit. A special thanks to Jaymeen Uncle, as he provided the voices for my websites.
         </div>
     )
 }

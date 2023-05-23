@@ -81,8 +81,8 @@ export default function Quiz(props) {
                     ? <div className="quiz_lesson_four_question">
 
 
-                        <span>CORRECT!!!! Good Job</span>
-                        <button onClick={set_question}>next question</button>
+                        <span>CORRECT!!!! Good Job</span><br /><br />
+                        <button onClick={set_question} className="next_question">next question</button>
                     </div>
                     : (get_question_correct === "hide")
                         ? <div className="quiz_lesson_four_question">
@@ -101,7 +101,8 @@ export default function Quiz(props) {
                         <div className="quiz_lesson_four_question">
 
                             <span>INCORRECT, the right answer was {current_question[1]}</span>
-                            <button onClick={set_question}>next question</button>
+                            <br /><br />
+                            <button onClick={set_question} className="next_question">next question</button>
                         </div>
                 }
             </div>
