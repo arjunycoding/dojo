@@ -76,7 +76,7 @@
 }
 
 .small_font {
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .next_question {
@@ -137,4 +137,8 @@ button,
     border-bottom: 1px solid #dee2e6;
     height: 600px;
     overflow-x: scroll;
+}
+
+.selected_letter {
+    color: #dc3545 !important;
 }

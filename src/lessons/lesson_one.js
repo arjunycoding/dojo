@@ -14,7 +14,7 @@ export default function LessonOne() {
                 <Row>
                     <Col xs={3}>
                         {vowels.map((letter) => {
-                            return (<button className="letter_button_select" key={letter.letter} onClick={() => { set_current_letter(letter) }}>{letter.letter}</button>)
+                            return (<button className={current_letter.letter === letter.letter ? "selected_letter letter_button_select" : "letter_button_select"} key={letter.letter} onClick={() => { set_current_letter(letter) }}>{letter.letter}</button>)
                         })}
                     </Col>
                     <Col>

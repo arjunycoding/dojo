@@ -20,10 +20,10 @@ export default function WelcomeMessage() {
             However, learning Sanskrit might initially seem tedious. That is why I have created this website—to help you break down complex languages into simpler pieces.
             <br />
             <br />
-            You will find five tabs titled "Info," "Vowels," "Consonants," "Guess The Letter," and "Guess The Audio." The first section is the one you are currently reading. The second and third tabs will allow you to learn the Sanskrit alphabet, starting with the vowels and then the consonants. Simply click on a letter and then click the big letter to hear its pronunciation. Take a look at the screenshots below to help you.
+            You will find five tabs titled "Info," "Vowels," "Consonants," "Guess The Letter," and "Guess The Audio." The first section is the one you are currently reading. The second and third tabs will allow you to learn the Sanskrit alphabet, starting with the vowels and then the consonants. Simply click on a letter and then click the big letter to hear its pronunciation.
             <br />
             <br />
-            The fourth and fifth sections help you practice the Sanskrit alphabet. In the fourth section, an audio will be provided, and you will have to guess the corresponding letter. Conversely, in the fifth section, you will have to find the audio that matches the given letter. Feel free to refer to the screenshot below for a better understanding!
+            The fourth and fifth sections help you practice the Sanskrit alphabet. In the fourth section, an audio will be provided, and you will have to guess the corresponding letter. Conversely, in the fifth section, you will have to find the audio that matches the given letter.
             <br />
             <br />
             <b>Credits</b>
