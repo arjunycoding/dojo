@@ -23,7 +23,7 @@ export default function WelcomeMessage() {
             You will find five tabs titled "Info," "Vowels," "Consonants," "Guess The Letter," and "Guess The Audio." The first section is the one you are currently reading. The second and third tabs will allow you to learn the Sanskrit alphabet, starting with the vowels and then the consonants. Simply click on a letter and then click the big letter to hear its pronunciation.
             <br />
             <br />
-            The fourth and fifth sections help you practice the Sanskrit alphabet. In the fourth section, an audio will be provided, and you will have to guess the corresponding letter. Conversely, in the fifth section, you will have to find the audio that matches the given letter.
+            The fourth and fifth sections help you practice the Sanskrit alphabet. In the fourth section, an audio will be provided, and you will have to guess the corresponding letter. However, in the fifth section, you will do the opposite , you will have to find the audio that matches the given letter.
             <br />
             <br />
             <b>Credits</b>
