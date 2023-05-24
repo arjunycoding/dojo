@@ -103,13 +103,13 @@ export default function Quiz(props) {
                     : (get_question_correct === false || get_question_correct === "false")
                         ? <div className="quiz_lesson_four_question">
 
-                            INCORRECT, the right answer was:
+                            INCORRECT, the right answer was:<br />
                             <button className="sanskrit medium_font option_quiz_lesson_three"> <LetterBtn symbol={current_question[1]} audio_file={current_question[0]} answer={true} /></button>
-
-                            <button className="next_question" onClick={() => {
+                            <br />
+                            <Button variant="primary" className="next_question" onClick={() => {
                                 set_current_question(generate_random_question())
                                 set_get_question_correct("hide")
-                            }}>next question</button>
+                            }}>next question</Button>
                         </div>
                         :
                         <div className="quiz_lesson_four_question">

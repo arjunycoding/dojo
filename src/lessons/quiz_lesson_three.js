@@ -1,5 +1,6 @@
 import React from "react";
 import LetterBtn from "./letter_button";
+import { Button } from "react-bootstrap";
 
 export default function Quiz(props) {
     const [get_question_correct, set_get_question_correct] = React.useState("hide")
@@ -82,7 +83,7 @@ export default function Quiz(props) {
 
 
                         <span>CORRECT!!!! Good Job</span><br /><br />
-                        <button onClick={set_question} className="next_question">next question</button>
+                        <Button variant="primary" onClick={set_question} className="next_question">next question</Button>
                     </div>
                     : (get_question_correct === "hide")
                         ? <div className="quiz_lesson_four_question">
@@ -102,7 +103,7 @@ export default function Quiz(props) {
 
                             <span>INCORRECT, the right answer was {current_question[1]}</span>
                             <br /><br />
-                            <button onClick={set_question} className="next_question">next question</button>
+                            <Button variant="primary" onClick={set_question} className="next_question">next question</Button >
                         </div>
                 }
             </div>
