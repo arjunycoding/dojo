@@ -98,7 +98,7 @@ export default function Quiz(props) {
                         <span>CORRECT!!!! Good Job</span>
                         <br />
                         <br />
-                        <button className="next_question" onClick={set_question}>Next Question</button>
+                        <Button variant="primary" onClick={set_question} className="next_question">next question</Button >
                     </div>
                     : (get_question_correct === false || get_question_correct === "false")
                         ? <div className="quiz_lesson_four_question">
