@@ -142,3 +142,12 @@ button,
 .selected_letter {
     color: #dc3545 !important;
 }
+
+.alert {
+    width: 300px;
+    margin: auto;
+}
+
+.alert_hidden {
+    display: none;
+}

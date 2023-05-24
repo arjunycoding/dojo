@@ -13,11 +13,14 @@ export default function LessonOne() {
             <br />
             <Container>
                 <Row>
-                    <Col sm={3}>
+                    <Col sm={4}>
                         {consonants.map((letter) => {
                             add_break++
                             return (<span key={letter.letter}>
-                                <button className="letter_button_select" key={letter.letter} onClick={() => { set_current_letter(letter) }}>{letter.letter}</button>
+                                <button className={current_letter.letter === letter.letter ? "selected_letter letter_button_select" : "letter_button_select"} key={letter.letter} onClick={() => {
+                                    set_current_letter(letter)
+                                    new Audio(letter.fileName).play()
+                                }}>{letter.letter}</button>
                                 {(add_break % 5 === 0 && add_break < 29) || add_break === 29 || add_break === 33 ? <br /> : ""}
                             </span>)
                         })}

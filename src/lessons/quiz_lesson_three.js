@@ -86,7 +86,7 @@ export default function Quiz(props) {
                     </div>
                     : (get_question_correct === "hide")
                         ? <div className="quiz_lesson_four_question">
-
+                            <h5>Click the Blue Box To Play Audio, Then Identify The Letter:</h5><br />
                             <LetterBtn key={1} audio_file={current_question[0]} large_audio_btn={true} />
                             <br />
                             <br />
