@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 export default function LetterBtn(props) {
     function play_audio() {
         new Audio(props.audio_file).play()
@@ -16,11 +16,11 @@ export default function LetterBtn(props) {
         )
     } else if (props.large_audio_btn) {
         return (<span className="hidden_letter_button large_audio_btn" onClick={() => { play_audio() }}>
-            <FontAwesomeIcon icon={faPlay} size="1x" />
+            <FontAwesomeIcon icon={faVolumeHigh} size="1x" />
         </span >)
     } else if (props.audio_btn) {
         return (<span className="hidden_letter_button" onClick={() => { play_audio() }}>
-            <FontAwesomeIcon icon={faPlay} />
+            <FontAwesomeIcon icon={faVolumeHigh} size="1x" />
         </span >)
     } else if (props.huge) {
         return (<button className="letter_button_huge" onClick={() => { play_audio() }}>{props.symbol}</button>)

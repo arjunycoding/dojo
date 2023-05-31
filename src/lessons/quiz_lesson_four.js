@@ -1,8 +1,8 @@
 import React from "react";
 import LetterBtn from "./letter_button";
 import { Alert, Button } from "react-bootstrap";
-export default function Quiz(props) {
 
+export default function Quiz(props) {
     const [get_question_correct, set_get_question_correct] = React.useState("hide")
     const [total_questions, set_total_questions] = React.useState(0)
     const [right_answers, set_right_answers] = React.useState(0)
@@ -98,7 +98,7 @@ export default function Quiz(props) {
                     </div>
                     : (get_question_correct === false || get_question_correct === "false")
                         ? <div className="quiz_lesson_four_question">
-                            {new Audio(current_question[1]).play()}
+
                             INCORRECT, the right answer was:<br />
                             <button className="sanskrit medium_font option_quiz_lesson_three"> <LetterBtn symbol={current_question[1]} audio_file={current_question[0]} answer={true} /></button>
                             <br />
