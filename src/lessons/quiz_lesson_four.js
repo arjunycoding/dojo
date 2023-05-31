@@ -9,9 +9,6 @@ export default function Quiz(props) {
     const [current_question, set_current_question] = React.useState(generate_random_question())
     const [error_class_name, set_error_class_name] = React.useState("alert_hidden")
     let option_selected = ""
-    function play_audio(audio) {
-        new Audio(audio).play()
-    }
     function set_option_selected(new_value) {
         option_selected = new_value
 
