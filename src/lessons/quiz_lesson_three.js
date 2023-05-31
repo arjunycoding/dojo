@@ -1,7 +1,7 @@
 import React from "react";
 import LetterBtn from "./letter_button";
 import { Button } from "react-bootstrap";
-
+// FIX INCORRECT(make it so that the audio auto plays)
 export default function Quiz(props) {
     const [get_question_correct, set_get_question_correct] = React.useState("hide")
     const [total_questions, set_total_questions] = React.useState(0)
@@ -87,7 +87,7 @@ export default function Quiz(props) {
                     </div>
                     : (get_question_correct === "hide")
                         ? <div className="quiz_lesson_four_question">
-                            <h5>Click the Blue Box To Play Audio, Then Identify The Letter:</h5><br />
+                            <h5>Click to Play Audio, Then Identify The Letter:</h5>
                             <LetterBtn key={1} audio_file={current_question[0]} large_audio_btn={true} />
                             <br />
                             <br />
