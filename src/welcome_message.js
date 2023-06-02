@@ -11,10 +11,10 @@ export default function WelcomeMessage() {
             <b>How to use this page?</b>
             <br />
             <br />
-            However, learning Sanskrit might initially seem tedious. That is why I have created this website—to help you break down complex languages into simpler pieces.
+            However, learning Sanskrit might initially seem tedious. That is why I have created this website—to help break down these complex languages into simpler parts.
             <br />
             <br />
-            You will find five tabs titled <i>Info, Vowels, Consonants, Guess The Letter, and Guess The Audio.</i> The first section is the one you are currently reading. The second and third tabs will allow you to learn the Sanskrit alphabet, starting with the vowels and then the consonants. Simply click on a letter and then click the big letter to hear its pronunciation.
+            You will find five tabs titled <i>Introduction, Vowels, Consonants, Guess The Letter, and Guess The Audio</i>. The first section is the one you are currently reading. The second and third tabs will allow you to learn the Sanskrit alphabet, starting with the vowels and then the consonants. Simply click on a letter to hear its pronunciation. If you would like to hear it again press the letter.
             <br />
             <br />
             The fourth and fifth sections help you practice the Sanskrit alphabet. In the fourth section, an audio will be provided, and you will have to guess the corresponding letter. However, in the fifth section, you will do the opposite, you will have to find the audio that matches the given letter.
@@ -23,7 +23,8 @@ export default function WelcomeMessage() {
             <b>Credits</b>
             <br />
             <br />
-            A sincere thanks to  <a href="http://www.vidyapith.org/" target="_blank" rel="noreferrer">Vivekananda Vidyapith</a> for helping me learn sanskrit. A special thanks to Jaymeen Uncle, as he provided the voices for my websites.
+            A sincere thanks to <a href="http://www.vidyapith.org/" target="_blank" rel="noreferrer">Vivekananda Vidyapith</a> for introducing and instilling in me the passion to learn Sanskrit. A special thanks to my Sanskrit teacher Mr. Jaymeen, who provided the voice for my website.
+
         </div>
     )
 }

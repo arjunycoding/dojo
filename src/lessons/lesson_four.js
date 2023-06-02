@@ -7,7 +7,7 @@ export default function LessonThree() {
     return (
         <div className="lesson">
             <p>
-                Now, in this quiz I am going give you an letter and you will have to figure out which audio it belongs to.
+                In this quiz, select an audio from the provided options which match the letter at the top.
             </p>
             <div className="quiz">
                 <Quiz array={array} key={1} />
