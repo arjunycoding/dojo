@@ -101,9 +101,13 @@ export default function Quiz(props) {
                         :
                         <div className="quiz_lesson_four_question">
 
-                            <span>INCORRECT, the right answer was {current_question[1]}</span>
-                            <br /><br />
-                            <Button variant="primary" onClick={set_question} className="next_question">next question</Button >
+                            INCORRECT, the right answer was:<br />
+                            <button className="sanskrit medium_font option_quiz_lesson_three"> <LetterBtn symbol={current_question[1]} audio_file={current_question[0]} answer={true} /></button>
+                            <br />
+                            <Button variant="primary" className="next_question" onClick={() => {
+                                set_current_question(generate_random_question())
+                                set_get_question_correct("hide")
+                            }}>next question</Button>
                         </div>
                 }
             </div>

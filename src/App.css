@@ -118,7 +118,8 @@ button:hover,
 .large_audio_btn:hover,
 .next_question:hover,
 .hidden_letter_button:hover,
-.letter_button_huge:hover {
+.letter_button_huge:hover,
+.click_div:hover {
     opacity: 0.5;
 }
 
@@ -126,7 +127,8 @@ button,
 .large_audio_btn,
 .next_question,
 .hidden_letter_button,
-.letter_button_huge {
+.letter_button_huge,
+.click_div {
     transition: opacity 0.5s;
 }
 

@@ -27,7 +27,7 @@ export default function LessonOne() {
                     </Col>
                     <Col>
                         {current_letter ?
-                            <div>
+                            <div onClick={() => { new Audio(current_letter.fileName).play() }} className="click_div">
                                 <LetterBtn symbol={current_letter.letter} audio_file={current_letter.fileName} huge={true} />
                                 <p className="none_selected">click to play</p>
                             </div>
